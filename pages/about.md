@@ -4,6 +4,24 @@ title: About
 permalink: /about
 ---
 
-# Portfolio Jekyll Theme
+# Lucas Kent
 
-This is a personal portfolio theme that I built from the ground up, using the [DevTips Starter Kit](http://devtipsstarterkit.com/) as a foundation for starting, and following closely the amazing tutorial by [Travis Neilson over at DevTips](https://www.youtube.com/watch?v=T6jKLsxbFg4&list=PL0CB3OvPhDA_STygmp3sDenx3UpdOMk7P). You can [check out the demo](lenpaul.github.io/portfolio-jekyll-theme/), and [fork the repository](https://github.com/LeNPaul/portfolio-jekyll-theme/fork), to get started.
+This website is my personal portfolio. On the projects page, you can see the executive summaries of projects I have worked on. The Blog page contains a track record of personal milestones I have reached. Finally, you can use the Contact page or the social links on the icons below to get in touch.
+
+About this website
+---
+This website is hosted through GitHub Pages and was forked using a template Jekyll website created by the talented Paul Le. All credit for the design of this website goes to him.
+
+Links to his socials:
+
+Template website - https://lenpaul.github.io/portfolio-jekyll-theme/about
+
+LinkedIn - https://www.linkedin.com/in/lenpaul/
+
+GitHub - https://github.com/lenpaul
+
+Instagram - https://www.instagram.com/paululele/
+
+X - https://x.com/paululele
+
+You can also find these on the template website.
