@@ -6,7 +6,7 @@ permalink: /about
 
 # Lucas Kent
 
-This website is my personal portfolio. On the projects page, you can see the executive summaries of projects I have worked on. The Blog page contains a track record of personal milestones I have reached. Finally, you can use the Contact page or the social links on the icons below to get in touch.
+This website is my personal portfolio. On the projects page, you can see the executive summaries of projects I have worked on, and you can use the Contact page or the social links on the icons below to get in touch.
 
 About this website
 ---
