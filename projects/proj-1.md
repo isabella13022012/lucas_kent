@@ -68,12 +68,12 @@ _**Using machine learning to identify areas of interest in an anonymous airline 
 
 Executive Summary
 ---
-**Objective**
+**a. Objective**
 
 The objective of this capstone project is to identify which features in a survey dataset most greatly affect 
 the loyalty of a customer to a major commercial airline.
 
-**Data Source**
+**b. Data Source**
 
 The data was taken from an anonymised airline survey from Kaggle, (it has been 
 suggested that this survey was taken by United, though this is not confirmed). The data 
@@ -89,7 +89,7 @@ from customers rating flight services from 0-5. There is also an additional I.D.
 with integer data representing each individual customer, labelled _id_.
 
 
-**Rationale**
+**c. Rationale**
 
 Building a ML model capable of correctly classifying customer loyalty allows the airline 
 to more effectively view which factors contribute to its long-term business success and 
@@ -97,7 +97,7 @@ growth of its brand. It may also thus help in reducing costs and identifying red
 the business model.
 
 
-**Project outline**
+**d. Project outline**
 
 1. Data importing and preprocessing – basic cleaning, identification of outliers.
 2. EDA – basic statistics on both categorical and numerical columns. 
@@ -106,7 +106,7 @@ the business model.
 6. Results and conclusion.
 
  
-**Conclusion**
+**e. Conclusion**
 
 I observed no major trends in age against distance for loyal customers, but there were 
 significant repeated trends across numerous “classes” of customers who were disloyal 
@@ -117,21 +117,21 @@ decisions. The two variables with the clearest patterns were _Age_ and _Flight D
 Data importing and preprocessing
 ---
 
-**Data importing**
+**a. Data importing**
 
 
 The data was downloaded as a CSV from Kaggle[1]. It was then uploaded to a Jupyter 
 Notebook file using Pandas’ read_csv() function.
 
 
-**Cleaning**
+**b. Cleaning**
 
 I took steps to ensure the data I was using was fair and the model was able to learn 
 from it. The first major step in doing this was to drop NaN values from the set. These 
 removed only a few rows, and so I preferred deletion over replacement.
 
 
-**Target/dependent variable splitting**
+**c. Target/dependent variable splitting**
 
 The target variable, y, was the _Customer Type_ column. The remaining 
 columns were dependent variables.
@@ -139,7 +139,7 @@ columns were dependent variables.
 
 EDA
 ---
-**Basic descriptive statistics**
+**a. Basic descriptive statistics**
 
 The categorical data in the survey is relatively limited in diversity. Each categorical 
 column is as follows:
@@ -174,12 +174,12 @@ numerical columns, showing nothing significantly out of the ordinary.
 ![Screenshot_24-8-2024_211950_localhost](https://github.com/user-attachments/assets/a4a5a225-7bdc-443d-9755-015b60bc5e8d)
 
 
-**Outliers**
+**b. Outliers**
 
 Again, nothing seemed unnatural from our data. All ages seem perfectly normal and 
 there are no unusual data points that could interfere with our goals.
 
-**Categorical comparisons**
+**c. Categorical comparisons**
 
 To begin EDA, I wanted to assess the relationship categorical variables had with each other. This would allow us to observe underlying trends and basic targets for the improvement of our business model, and also allow us to comment on the "importance" of a result - as a theoretical example, were 99% of loyal customers female, we would consider the predictions of a model with "female loyal customers" as its _Gender_ and _Customer Type_ attributes to be more accurate/important than a model with "male loyal customers" as its respective attributes.
 
@@ -225,7 +225,7 @@ Inflight entertainment average is 3.3837450863793275 and kurtosis is -0.53224638
 ```
 Nothing stands out from these means. Not only do they not differ greatly from each other, but the kurtoses on each set on means are all significantly leptokurtic and thus the means are not a good representation of the average score. From this, one could conclude that whilst there is nothing untoward about the service being provided to disloyal travelling businesspeople, satisfaction rates are still relatively low, and the company could take steps to improve its image amongst businesspeople and perhaps do more in-depth studies into why disloyal customers are dissatisfied.
 
-**EDA conclusions**
+**d. EDA conclusions**
 
 We can see some trends within the basic categorical data itself. More people appear to 
 use the company's services for business travel, though there seems to be a relatively even split of 
@@ -245,7 +245,7 @@ A final, fascinating point is that these stark differences appear to form more f
 
 Methodology
 ---
-**Train/validation/test split**
+**a. Train/validation/test split**
 
 With my clean dataset, I first split my data set into three parts, for training, validation, 
 and testing, using scikit learn’s train_test_split() function[2]. These were then stored in 
@@ -254,7 +254,7 @@ settings were used other than random_state=22 which was used for consistent resu
 I also used Python’s pickle library to serialize these test objects for use in other Jupyter 
 notebooks.
 
-**Initial model selection**
+**b. Initial model selection**
 
 With the samples tested for authenticity, I moved on to the initial stages of model 
 selection. As the target variables are both categorical, this project is a classification 
@@ -280,13 +280,13 @@ These aren’t indicative of the true score of the model as we haven’t tested 
 third test set. That will come later. For now, we observe that XGBoost performs slightly 
 better.
 
-**Hyperparameter testing**
+**c. Hyperparameter testing**
 
 Given the small scale of this project, and limited budget and time constraints, a 
 relatively low number of hyperparameters were tested during the model selection 
 process. These will be explained below.
 
-**RandomForestClassifier()[i]**
+**c.i. RandomForestClassifier()**
 
 The settings tested on RandomForestClassifier were as follows:
 ```
@@ -303,7 +303,7 @@ ccp_alpha, so I did not use it.
 ```
 With this in mind, the RandomForestClassifier model selected was default.
 
-**SVC[ii]**
+**c.ii. SVC**
 
 With other algorithms, I used all the training data to fit the model, and then all the 
 validation data to validate the model. However, with SVC, the training time scales 
@@ -321,7 +321,7 @@ cache: No discernale difference so default was kept.
 max_iter: Default (unlimited) beat all tested maximum iterations settings. 
 I therefore chose SVC with default settings.
 ```
-**XGBoost[iii]**
+**c.iii. XGBoost**
 The settings tested on XGBoost were as follows:
 ```
 max_depth: Default (unlimited) performed the best. 
@@ -337,7 +337,7 @@ whatsoever with this. Default is therefore kept.
 ```
 With this in mind, XGBoost is kept as default.
 
-**Cross-fold validation**
+**d. Cross-fold validation**
 
 All models performed best under default settings. I then compared each model using k
 fold cross validation to gain an unbiased score. The results were as follows.
@@ -351,7 +351,7 @@ XGBoost score against test set is 0.990145805016681
 XGBoost under default settings clearly beats the other classifier models, if only slightly. 
 It is therefore chosen as our model.
 
-**PCA and unsupervised learning**
+**e. PCA and unsupervised learning**
 
 Before assessing the results of the classifier, I decided to make use of unsupervised 
 learning to see if there were any “natural” groups that formed in the set. For this, I used 
@@ -375,7 +375,7 @@ All PCAs seemed to suggest is that departure delay and arrival delay are weakly 
 (unsurprisingly), but other than that, there are no clear groups formed from the data.
 
 
-**Results generation**
+**f. Results generation**
 
 The results from PCA suggest there are no notable “groups” that can be inputted into 
 the classifier and I therefore had to “toggle” each feature to achieve a result. 24 
@@ -449,7 +449,7 @@ compounded with our age, distance, and other categorical “toggles” would hav
 resulted in a results array number in the millions, which was outside of my capstone 
 scope.
 
-**Feature importance**
+**g. Feature importance**
 
 XGBoost learned that Age and Flight Distance were the most important features in this model.
 
@@ -489,7 +489,7 @@ Thus, these two were compared to observe trends.
 
 Results and conclusion
 ---
-**Results**
+**a. Results**
 
 Not every “setting” returned disloyal customers. However, for every setting, there were 
 no significant trends amongst those predicted as Loyal. I have included a small number 
@@ -511,7 +511,7 @@ the Flight Distance is under 3000 miles. Then, from 35-50, this increases to aro
 only.
 
 
-**Conclusion**
+**b. Conclusion**
 
 
 Whilst the depth of this relatively limited project only skims the surface of the potential 
