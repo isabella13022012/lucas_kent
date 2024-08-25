@@ -260,8 +260,8 @@ With the samples tested for authenticity, I moved on to the initial stages of mo
 selection. As the target variables are both categorical, this project is a classification 
 problem. For this, three basic algorithms were selected for hyperparameter testing. 
 These are Random Forest, SVM, and Gradient Boosting. I chose to implement these 
-using scikit learn’s RandomForestClassifier[4], SVC[5], and XGBoost’s 
-XGBoostClassifier[6]. I decided to score them based on the validation data. The results 
+using scikit learn’s RandomForestClassifier[3], SVC[4], and XGBoost’s 
+XGBoostClassifier[5]. I decided to score them based on the validation data. The results 
 were as follows:
 ```
 RF scores 
@@ -307,7 +307,7 @@ With this in mind, the RandomForestClassifier model selected was default.
 
 With other algorithms, I used all the training data to fit the model, and then all the 
 validation data to validate the model. However, with SVC, the training time scales 
-quadratically with the number of rows[7]. It was therefore necessary for me to sample 
+quadratically with the number of rows[6]. It was therefore necessary for me to sample 
 the dataset. I set 10000 as an acceptable no. of rows.
 
 The settings tested on SVC were as follows:
@@ -355,7 +355,7 @@ It is therefore chosen as our model.
 
 Before assessing the results of the classifier, I decided to make use of unsupervised 
 learning to see if there were any “natural” groups that formed in the set. For this, I used 
-scikit learn’s PCA function[8]. I initially tested this on the whole group.
+scikit learn’s PCA function[7]. I initially tested this on the whole group.
 ![1st PCA](https://github.com/user-attachments/assets/c72b68fa-db68-4ad3-a6ba-f021b65ba8b4)
 
 Apart from the y axis, no clear clusters shown here. I then checked for age, and 
@@ -408,7 +408,7 @@ separate combinations of the categorical data were possible. These were:
 ```
 
 My next step was to see if any numerical information could be represented more readily 
-by the mean. I decided to use SciPy’s kurtosis[9] function to determine the kurtosis of 
+by the mean. I decided to use SciPy’s kurtosis[8] function to determine the kurtosis of 
 each numerical feature “against” age. I did this by using Pandas’ .loc[] function and a 
 boolean vector to “drill into” each age’s results in the original data set and collect each 
 features’ mean kurtosis result.
@@ -443,7 +443,7 @@ permutations was staggering, and, given my project constraints, I did not have t
 nor the processing power to return the array efficiently. For this reason, I created a 
 “generic score”, the results assume the customer scores the same in each survey 
 column. 
-For reference, I used an online permutations calculator from numbergenerator.org[10] to 
+For reference, I used an online permutations calculator from numbergenerator.org[9] to 
 calculate that for a sample size of fourteen, 16,384 permutations were possible. This, 
 compounded with our age, distance, and other categorical “toggles” would have 
 resulted in a results array number in the millions, which was outside of my capstone 
@@ -532,20 +532,18 @@ References
 Note 1: https://www.kaggle.com/datasets/johndddddd/customer-satisfaction/code 
 Note 2: https://scikit
 learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html 
-Note 3: 
-https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html 
-Note 4: https://scikit
+Note 3: https://scikit
 learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html 
-Note 5: https://scikit
+Note 4: https://scikit
 learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC 
-Note 6: https://xgboost.readthedocs.io/en/stable/parameter.html#parameters-for
+Note 5: https://xgboost.readthedocs.io/en/stable/parameter.html#parameters-for
 tree-booster 
-Note 7: https://stackoverflow.com/questions/55471576/increase-speed-for-svm-with
+Note 6: https://stackoverflow.com/questions/55471576/increase-speed-for-svm-with
 polynomial-kernel 
-Note 8: https://scikit
+Note 7: https://scikit
 learn.org/stable/modules/generated/sklearn.decomposition.PCA.html 
-Note 9: 
+Note 8: 
 https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kurtosis.html 
-Note 10: https://numbergenerator.org/permutations-and
+Note 9: https://numbergenerator.org/permutations-and
 combinations/list#!numbers=14&lines=5&low=0&high=100&range=0,5&unique=false&
  order_matters=true&csv=csv&oddeven=&oddqty=0&sorted=false&sets=&addfilters=
