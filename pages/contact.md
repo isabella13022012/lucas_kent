@@ -13,3 +13,5 @@ I can be contacted through the social links given at the bottom of the page. I a
 **freelancer:** https://www.freelancer.com/u/lk19989
 
 **Upwork:** https://www.upwork.com/freelancers/~0132bb3b2cf7c5d8e4
+
+**Kaggle:** https://www.kaggle.com/lucaskent
