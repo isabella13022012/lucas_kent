@@ -529,20 +529,20 @@ middle aged people.
 
 References
 ---
-Note 1: (https://www.kaggle.com/datasets/johndddddd/customer-satisfaction/code)
+Note 1: [https://www.kaggle.com/datasets/johndddddd/customer-satisfaction/code](https://www.kaggle.com/datasets/johndddddd/customer-satisfaction/code)
 
-Note 2: (https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
+Note 2: [https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
 
-Note 3: (https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+Note 3: [https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 
-Note 4: (https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)
+Note 4: [https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)
 
-Note 5: (https://xgboost.readthedocs.io/en/stable/parameter.html#parameters-for-tree-booster)
+Note 5: [https://xgboost.readthedocs.io/en/stable/parameter.html#parameters-for-tree-booster](https://xgboost.readthedocs.io/en/stable/parameter.html#parameters-for-tree-booster)
 
-Note 6: (https://stackoverflow.com/questions/55471576/increase-speed-for-svm-with-polynomial-kernel)
+Note 6: [https://stackoverflow.com/questions/55471576/increase-speed-for-svm-with-polynomial-kernel](https://stackoverflow.com/questions/55471576/increase-speed-for-svm-with-polynomial-kernel)
 
-Note 7: (https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
+Note 7: [https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
 
-Note 8: (https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kurtosis.html)
+Note 8: [https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kurtosis.html](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kurtosis.html)
 
-Note 9: (https://numbergenerator.org/permutations-and-combinations/list#!numbers=14&lines=5&low=0&high=100&range=0,5&unique=false&order_matters=true&csv=csv&oddeven=&oddqty=0&sorted=false&sets=&addfilters=)
+Note 9: [https://numbergenerator.org/permutations-and-combinations/list#!numbers=14&lines=5&low=0&high=100&range=0,5&unique=false&order_matters=true&csv=csv&oddeven=&oddqty=0&sorted=false&sets=&addfilters=](https://numbergenerator.org/permutations-and-combinations/list#!numbers=14&lines=5&low=0&high=100&range=0,5&unique=false&order_matters=true&csv=csv&oddeven=&oddqty=0&sorted=false&sets=&addfilters=)
