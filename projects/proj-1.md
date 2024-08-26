@@ -529,7 +529,7 @@ middle aged people.
 
 References
 ---
-Note 1: [https://www.kaggle.com/datasets/johndddddd/customer-satisfaction/code](https://www.kaggle.com/datasets/johndddddd/customer-satisfaction/code)
+Note 1: [Isa](https://www.kaggle.com/datasets/johndddddd/customer-satisfaction/code)
 
 Note 2: [https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
 
