@@ -17,7 +17,7 @@ projects:
 
 social:
 - {icon: 'github',    link: 'https://github.com/isabella13022012'}
-- {icon: 'linkedin',  link: 'www.linkedin.com/in/lucas-kent-212a1b16a'}
+- {icon: 'linkedin',  link: 'https://www.linkedin.com/in/lucas-kent-212a1b16a'}
 - {icon: 'envelope',  link: 'mailto:mailto:lsk1@hotmail.co.uk'}
 
 # social network icons available: 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' / 'behance' / 'soundcloud' / 'vine'
